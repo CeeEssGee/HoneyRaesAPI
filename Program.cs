@@ -218,7 +218,7 @@ app.MapPut("/servicetickets/{id}", (int id, ServiceTicket serviceTicket) =>
     ServiceTicket ticketToUpdate = serviceTickets.FirstOrDefault(st => st.Id == id);
     // ticketIndex = the index of the ticketToUpdate
     int ticketIndex = serviceTickets.IndexOf(ticketToUpdate);
-    // if not found
+    // if not found (First or Default/Null)
     if (ticketToUpdate == null)
     {
         // return results not found
